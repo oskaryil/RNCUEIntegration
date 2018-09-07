@@ -1,0 +1,136 @@
+//
+//  LSPrefixHeader.pch
+//  Light Show
+//
+//  Created by Jameson Rader on 3/30/18.
+//  Copyright © 2018 CUE Audio, LLC. All rights reserved.
+//
+
+#ifndef LSPrefixHeader_pch
+#define LSPrefixHeader_pch
+
+
+#import "CUELightShowUtils.h"
+#import "CUEDiskUtils.h"
+
+#define isDEBUG true
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#define kBundleName @"LightShowLib.bundle/"
+#define kBundleBase @"LightShowLib"
+
+#define triggerHitURL @"https://qraider.com/LightShows/tracker.php"
+
+#define diffMin 0
+#define kDemoTriggerID @"11111000000"
+#define kBlacklistedTones @[@"10101010101", @"01010101010"]
+
+#define kJSONFile @"CUELightShows.json"
+#define kENGINECONFIG @"engineConfig"
+#define kDIFFMIN @"diffMin"
+#define kDEMOTRIGGER @"demoTrigger"
+#define kJSONDATA @"data"
+#define kJSONTriggers @"triggers"
+#define kJSONLIGHTSHOWS @"lightShows"
+#define kVERSIONS @"versions"
+#define kDEFAULT_SEQTRANDUR @"kCUEsequenceTransitionDuration"
+#define kSEQTRANDUR @"sequenceTransitionDuration"
+#define kdemoTrackURL @"demoTrackURL"
+#define kdemoTriggerURL @"demoTriggerURL"
+#define kSHOWLISTENERLABEL @"showListenerLabel"
+#define kDIRECTIONS @"directions"
+#define kSPINNER @"useSpinner"
+#define kHIDEDEMO @"hideDemo"
+#define kLISTENINGLABELTEXT @"listenerLabelText"
+#define kSECTIONVALUES @"sections"
+//mic view
+#define kSHOW_MICVIEW_DISMISS_BUTTON @"showMicViewDismissButton"
+#define kSHOW_MICVIEW @"showMicView"
+#define kMICVIEWTITLE @"micViewTitle"
+#define kMICVIEWSECONDARYTITLE @"micViewSecondaryTitle"
+#define kMICVIEWBODY @"micViewBody"
+#define kMICVIEWFOOTER @"micViewFooter"
+//instructional view -- LIGHT SHOW
+#define kSHOW_INSTRUCTIONALVIEW @"showInstructional"
+#define kINSTRUCTIONALVIEWTITLE @"instructionalViewTitle"
+#define kINSTRUCTIONALVIEW_BODYLEFT_1 @"instructionalViewBodyLeft1"
+#define kINSTRUCTIONALVIEW_BODYLEFT_2 @"instructionalViewBodyLeft2"
+#define kINSTRUCTIONALVIEW_BODYLEFT_3 @"instructionalViewBodyLeft3"
+#define kINSTRUCTIONALVIEW_BODYRIGHT_1 @"instructionalViewBodyRight1"
+#define kINSTRUCTIONALVIEW_BODYRIGHT_2 @"instructionalViewBodyRight2"
+#define kINSTRUCTIONALVIEW_BODYRIGHT_3 @"instructionalViewBodyRight3"
+//instructional view -- SELFIE CAM
+#define kSHOW_INSTRUCTIONALVIEW_CAM @"SC_showInstructional"
+#define kINSTRUCTIONALVIEWTITLE_CAM @"SC_instructionalViewTitle"
+#define kINSTRUCTIONALVIEW_BODYLEFT_1_CAM @"SC_instructionalViewBodyLeft1"
+#define kINSTRUCTIONALVIEW_BODYLEFT_2_CAM @"SC_instructionalViewBodyLeft2"
+#define kINSTRUCTIONALVIEW_BODYLEFT_3_CAM @"SC_instructionalViewBodyLeft3"
+#define kINSTRUCTIONALVIEW_BODYRIGHT_1_CAM @"SC_instructionalViewBodyRight1"
+#define kINSTRUCTIONALVIEW_BODYRIGHT_2_CAM @"SC_instructionalViewBodyRight2"
+#define kINSTRUCTIONALVIEW_BODYRIGHT_3_CAM @"SC_instructionalViewBodyRight3"
+//menu
+#define kMENUTEXTONE @"menuTextOne"
+#define kMENUTEXTTWO @"menuTextTwo"
+#define kMENUTEXTTHREE @"menuTextThree"
+#define kMENUTEXTFOUR @"menuTextFour"
+#define kMENUTEXTFIVE @"menuTextFive"
+//Mic Denied
+#define kDENIED_ALERT_TITLE_MIC @"micDeniedAlertTitle"
+#define kDENIED_ALERT_BODY_MIC @"micDeniedAlertBody"
+#define kDENIED_ALERT_SETTINGSBUTTON_MIC @"micDeniedAlertSettingsButton"
+#define kDENIED_ALERT_NOBUTTON_MIC @"micDeniedAlertNoButton"
+//Cam Denied
+#define kDENIED_ALERT_TITLE_CAM @"camDeniedAlertTitle"
+#define kDENIED_ALERT_BODY_CAM @"camDeniedAlertBody"
+#define kDENIED_ALERT_SETTINGSBUTTON_CAM @"camDeniedAlertSettingsButton"
+#define kDENIED_ALERT_NOBUTTON_CAM @"camDeniedAlertNoButton"
+//info
+#define kTITLE @"title"
+#define kSUBTITLE @"substitle"
+#define kBODY @"body"
+#define kEMAIL @"email"
+#define kFOMO @"fomo"
+#define kFOMOBUTTON @"fomobutton"
+#define kDISCLAIMER @"disclaimer"
+#define kFOOTERLEFTTITLE @"footerlefttitle"
+#define kFOOTERCENTERTITLE @"footercentertitle"
+#define kFOOTERRIGHTTITLE @"footerrighttitle"
+#define kFOOTERLEFTBODY @"footerleftbody"
+#define kFOOTERCENTERBODY @"footercenterbody"
+#define kFOOTERRIGHTBODY @"footerrightbody"
+#define kLINKURL @"linkURL"
+#define kLINKURLALT @"linkURLAlt"
+#define kDISCLAIMERALT @"disclaimerAlt"
+#define kFOMOALT @"fomoAlt"
+//help
+#define kHELP_Q1_TITLE @"WhatIsTextTitle"
+#define kHELP_Q1_BODY @"WhatIsText"
+#define kHELP_Q2_TITLE @"whenTextTitle"
+#define kHELP_Q2_BODY @"whenText"
+#define kHELP_SWITCH1_TITLE @"automaticPhotographyTextTitle"
+#define kHELP_SWITCH1_BODY @"automaticPhotographyText"
+#define kHELP_SWITCH2_TITLE @"automaticPhotographySelfieTextTitle"
+#define kHELP_SWITCH2_BODY @"automaticPhotographySelfieText"
+#define kDEFAULT_TAKEPHOTOSENABLED @"CUEtakephotosenabled"
+#define kDEFAULT_USEFRONTCAMERA @"CUEusefrontcamera"
+#define kDEFAULT_PHOTOASKEDPERMISSIONPRESSEDALLOW @"CUEaskedpermissionForAutomaticPhotosPressedAllow"
+//demo
+#define kALERT_TITLE @"demoAlertTitle"
+#define kALERT_BODY @"demoAlertBody"
+#define kALERT_BUTTONTITLE @"demoAlertButtonTitle"
+#define kDEMOTEXT @"demoText"
+#define kdemoTriggerVolume @"demoTriggerVolume"
+//unavailable
+#define kUNAVAILABLE_ALERT_TITLE @"unavailableTitle"
+#define kUNAVAILABLE_ALERT_BODY @"unavailableText"
+#define kUNAVAILABLE_ALERT_BUTTONTEXT @"unavailableButtonText"
+#define kUNAVAILABLE_ALERT_DIRECTIONS @"unavailableDirectionsText"
+
+//Assets
+#define kLoadingIndicatorGIFWhite @"cueloadingwhite" //Loading GIF (white)
+#define kLoadingIndicatorGIFBlack @"cueloadingblack" //Loading GIF (black)
+#define kLoadingIndicatorGIFGray @"cueloadinggray" //Loading GIF (gray)
+
+#endif /* LSPrefixHeader_pch */
